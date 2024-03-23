@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Queue System{% endblock %}</title>
+    {% block stylesheet %}
+    <!-- Link to stylesheets or inline styles -->
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <!-- Header content goes here -->
+    </header>
+
+    <nav>
+      <!-- Navigation menu goes here -->
+    </nav>
+
+    <main>
+      {% block content %}
+      <!-- Unique page content will go here -->
+      {% endblock %}
+    </main>
+
+    <footer>
+      <!-- Footer content goes here -->
+    </footer>
+
+    {% block javascript %}
+    <!-- Links to JavaScript files or inline scripts -->
+    {% endblock %}
+  </body>
+</html>

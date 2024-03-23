@@ -1,0 +1,10 @@
+{% extends 'queue_app/base.html' %}
+
+{% block title %}Your Number{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Your Number</h1>
+    <p>Your queue number is: {{ queue_number.number }}</p>
+</div>
+{% endblock %}

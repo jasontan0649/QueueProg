@@ -1,0 +1,19 @@
+{% extends 'queue_app/base.html' %}
+
+{% block title %}Admin - Next Active Queue{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Next Active Queue</h1>
+    {% if earliest_queue %}
+        <p>Queue Number: {{ earliest_queue.number }}</p>
+        <p>Message: {{ earliest_queue.message }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" value="Deactivate Queue Number">
+        </form>
+    {% else %}
+        <p>No active queues.</p>
+    {% endif %}
+</div>
+{% endblock %}

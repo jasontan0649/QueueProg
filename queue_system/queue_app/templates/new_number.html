@@ -1,0 +1,12 @@
+{% extends 'queue_app/base.html' %} 
+{% block title %}
+Get a New Number
+{% endblock %} {% block content %}
+<div class="container">
+  <h1>Get a New Number</h1>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+{% endblock %}

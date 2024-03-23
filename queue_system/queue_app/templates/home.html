@@ -1,0 +1,17 @@
+{% extends 'queue_app/base.html' %} {% block title %} Home - Queue System
+{%endblock %} {% block stylesheet %}
+<!-- Add any page-specific CSS here or link to external stylesheets -->
+{% endblock %} {% block content %}
+<div class="container">
+  <h1>Welcome to the Queue System</h1>
+  <p>This is the homepage of your queue management application.</p>
+  <div>
+    <a href="{% url 'new_number' %}" class="btn btn-primary">Get a Number</a>
+    <a href="{% url 'current_number' %}" class="btn btn-info"
+      >View Current Number</a
+    >
+  </div>
+</div>
+{% endblock %} {% block javascript %}
+<!-- Add any page-specific JavaScript here -->
+{% endblock %}

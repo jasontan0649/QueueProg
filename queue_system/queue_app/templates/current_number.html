@@ -1,0 +1,52 @@
+{% extends 'queue_app/base.html' %}
+
+{% block title %}Current Numbers{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Current Number {{ current_number }}</h1>
+    <h2>Pending List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for number in pending_numbers %}
+            <tr>
+                <td>{{ number.number }}</td>
+                <td>{{ number.message }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">There are no pending numbers at the moment.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Called List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for number in called_numbers %}
+            <tr>
+                <td>{{ number.number }}</td>
+                <td>{{ number.message }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">There are no called numbers at the moment.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
