@@ -3,7 +3,7 @@
     {
       "src": "djangoprojectname/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.10" }
     }
   ],
   "routes": [
@@ -12,7 +12,5 @@
       "dest": "djangoprojectname/wsgi.py"
     }
   ],
-  "rewrites": [
-    {"source": "/(.*)", "destination": "/"}
-]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
